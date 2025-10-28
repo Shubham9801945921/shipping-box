@@ -27,3 +27,45 @@ Automatic cost calculation per box based on destination.
 Data stored locally using localStorage.
 Fully responsive UI (works on mobile, tablet, and desktop).
 Simple single-page flow with navigation using React Router.
+
+Tech Stack
+
+React (with TypeScript)
+Tailwind CSS for styling
+React Router DOM for routing
+Vite as build tool
+localStorage for data persistence
+
+How Cost Calculation Works
+
+Each country has a currency conversion rate defined in .env.
+Example: Shipping from India to Sweden = weight × 7.35 INR.
+Cost is automatically calculated and shown in the list.
+
+Validations
+
+All fields (Receiver, Weight, Destination, Color) are required.
+If weight is negative, it resets to 0 and displays an error.
+If any field is missing, an alert message is shown.
+
+Data Storage
+
+Data is saved locally in the browser using localStorage.
+On reload, the saved boxes are automatically loaded into the list.
+
+Responsive Design
+
+Mobile: List collapses into scrollable cards.
+Tablet: Compact table layout.
+Desktop: Full-width table with spacing.
+
+Example Flow
+Open the app.
+Enter Receiver Name, Weight, Destination, and Box Color.
+Click Save Box.
+View the added box in the Box List page with the calculated cost.
+
+Author
+
+Shubham Kumar
+Front-End Developer (React.js)
